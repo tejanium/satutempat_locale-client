@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+lib = File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'satutempat_locale/client'
+require 'satutempat_locale/client/tool'
+
+SatutempatLocale::Client::Tool.new(ARGV).run
