@@ -25,8 +25,7 @@ module SatutempatLocale
         end
 
         def unpack
-          Minitar.unpack FILE_NAME,
-                         SatutempatLocale::Client.configuration.locale_path
+          Minitar.unpack FILE_NAME, '.'
         end
 
         def clean_file

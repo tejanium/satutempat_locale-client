@@ -18,9 +18,9 @@ describe SatutempatLocale::Client::Pull do
 
       lambda{
         SatutempatLocale::Client::Pull.new(server_url).perform!
-      }.should change { File.directory? 'config/locales' }.from(false).to(true)
+      }.should change { File.directory? 'fixtures' }.from(false).to(true)
 
-      FileUtils.rm_rf 'config'
+      FileUtils.rm_rf 'fixtures'
     end
   end
 end
