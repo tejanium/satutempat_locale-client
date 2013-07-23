@@ -18,8 +18,7 @@ module SatutempatLocale
       def run!
         case @args.first
           when /push/
-            Push.new(SatutempatLocale::Client.configuration.locale_path,
-              @server_url).perform!
+            Push.new('config/locales', @server_url).perform!
           when /pull/
             Pull.new(@server_url).perform!
         end
