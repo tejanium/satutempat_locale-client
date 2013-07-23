@@ -13,6 +13,8 @@ module SatutempatLocale
       def perform!
         pack_folder
         post
+      rescue
+        puts 'Please pull first!'
       ensure
         clean_file
       end
