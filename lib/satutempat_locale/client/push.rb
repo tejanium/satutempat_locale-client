@@ -11,11 +11,14 @@ module SatutempatLocale
       end
 
       def perform!
+        puts 'Packing your config/locales...'
         pack_folder
+        puts 'Sending data...'
         post
       rescue
-        puts 'Please pull first!'
+        puts 'Please pull first! Warning: Your changes will be overwriten.'
       ensure
+        puts 'Done.'
         clean_file
       end
 

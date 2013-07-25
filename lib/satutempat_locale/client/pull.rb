@@ -11,10 +11,13 @@ module SatutempatLocale
       end
 
       def perform!
+        puts 'Fetching tar file from server...'
         get
+        puts 'Unpacking tar file...'
         unpack
       ensure
         clean_file
+        puts 'Done.'
       end
 
       private
