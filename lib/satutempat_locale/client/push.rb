@@ -6,7 +6,7 @@ module SatutempatLocale
       def initialize folder_path, server_url
         @folder_path = folder_path
         @server_url  = server_url
-        @mark_file   = "#{ normalize_folder_path(@folder_path) }/.last_update"
+        @mark_file   = '.last_update'
         @client_mark = read_client_mark
       end
 
@@ -51,10 +51,6 @@ module SatutempatLocale
 
         def file_name
           @file_name ||= "#{ Time.now.to_i }.tar"
-        end
-
-        def normalize_folder_path folder_path
-          folder_path.gsub /\/\z/, ''
         end
     end
   end
